@@ -150,3 +150,11 @@ body{
   .flip-card-back {
     transform: rotateY(180deg);
   }
+  /*example to put a caption under the photo*/
+  .flip-card-front h3{
+    margin-top: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 25px;
+    color: antiquewhite;
+  }
