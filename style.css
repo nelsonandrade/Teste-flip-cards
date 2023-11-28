@@ -59,7 +59,7 @@ header{
 .container-ferrari {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  background:url("img/logo-ferrari.png") no-repeat center top ;
+  background:url("img/Ferrari/logo-ferrari.png") no-repeat center top ;
   width: auto;
   height: 900px;
   margin-bottom: 20px;
