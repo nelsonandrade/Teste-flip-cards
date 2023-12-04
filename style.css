@@ -61,7 +61,6 @@ header{
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   background:url("img/Ferrari/logo-ferrari.png") no-repeat center top ;
   width: auto;
-  height: 900px;
   margin-bottom: 20px;
   border: 3px solid black;
   box-shadow: 2px 5px 8px #626161;
@@ -71,7 +70,6 @@ header{
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   background:url("img/Lambo/lamborghini-logo.png") no-repeat center top ;
   width: auto;
-  height: 1015px;
   border: 3px solid black;
   box-shadow: 2px 5px 8px #626161;
 }
@@ -80,7 +78,6 @@ header{
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   background:url("img/Mclaren/Mclaren_logo.png") no-repeat center top ;
   width: auto;
-  height: 1015px;
   border: 3px solid black;
   box-shadow: 2px 5px 8px #626161;
 }
@@ -90,7 +87,6 @@ header{
   background:url("img/Bugatti/bugatti_logo.jpg") no-repeat center top ;
   background-size: contain;
   width: auto;
-  height: 1015px;
   border: 3px solid black;
   box-shadow: 2px 5px 8px #626161;
 }
@@ -100,7 +96,24 @@ header{
   background:url("img/Audi/audi-logo.png") no-repeat center top ;
   background-size: contain;
   width: auto;
-  height: ;
+  border: 3px solid black;
+  box-shadow: 2px 5px 8px #626161;
+}
+.container-bentley {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  background:url("img/Bentley/pngwing.com\ \(2\).png") no-repeat center top ;
+  background-size: contain;
+  width: auto;
+  border: 3px solid black;
+  box-shadow: 2px 5px 8px #626161;
+}
+.container-bmw {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  background:url("img/BMW/bmw-logo-683.png") no-repeat center top ;
+  background-size: contain;
+  width: auto;
   border: 3px solid black;
   box-shadow: 2px 5px 8px #626161;
 }
@@ -112,7 +125,7 @@ header{
 }
 }*/
 body{
-  background-color: #f2dbdb;
+  background-color: #c3d9f9;
 }
 .title h1{
   font-size: 55px;
