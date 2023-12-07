@@ -65,6 +65,15 @@ header{
   border: 3px solid black;
   box-shadow: 2px 5px 8px #626161;
 }
+.container-ford {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  background:url("img/Ford/ford-logo-png-1796.png") no-repeat center  ;
+  width: auto;
+  margin-bottom: 20px;
+  border: 3px solid black;
+  box-shadow: 2px 5px 8px #626161;
+}
 .container-lambo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
