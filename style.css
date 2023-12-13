@@ -255,3 +255,18 @@ body{
     height: 89px;
     background: url(img/car-focus.png) no-repeat 0 0
 }
+/*to display the button to go to the top of the page*/
+.back-to-top {
+ 
+  visibility: hidden;
+  opacity: 0;
+ 
+  transition: 0.3s;
+  transform: translateY(100%);
+ }
+ 
+ .back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+ }

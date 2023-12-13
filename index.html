@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="js" href="scrollspy.js">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-select.min.css">
     <title>Flip Cards</title>
 </head>
 <header>
@@ -933,10 +935,25 @@
       </div>  
   </div>
   <div class="car-top show">
+    <a class="back-to-top" onclick="scrollToTop()">
     <span>
       <img src="img/car.png" alt="car">
     </span>
+    </a>
+    <script>
+      const backToTopButton = document.querySelector('.back-to-top')
+          const backToTop = () => {
+          if (window.scrollY >= 100) {
+          backToTopButton.classList.add('show')
+          } else {
+          backToTopButton.classList.remove('show')
+          }
+          }
 
+          window.addEventListener('scroll', function () {
+          backToTop()
+          })
+    </script>
   </div>
 </body>
 </html>
