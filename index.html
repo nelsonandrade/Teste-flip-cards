@@ -30,7 +30,7 @@
 </div>
 </header>
 <body>
-  <div class="title">
+  <div id="topo" class="title">
     <h1>Audi</h1>
   </div>
 <div class="container-audi" id="audi">
@@ -934,13 +934,13 @@
         </div>
       </div>  
   </div>
-  <div class="car-top show">
-    <a class="back-to-top" onclick="scrollToTop()">
+  <div class="car-top show" data-scroll="suave" data-anima="scroll">
+    <a href="#topo" class="back-to-top" onclick="scrollToTop()">
     <span>
       <img src="img/car.png" alt="car">
     </span>
     </a>
-    <script>
+   <script>
       const backToTopButton = document.querySelector('.back-to-top')
           const backToTop = () => {
           if (window.scrollY >= 100) {
@@ -953,6 +953,22 @@
           window.addEventListener('scroll', function () {
           backToTop()
           })
+          function scrollToTop(event) {
+            event.preventDefault()
+
+            const href = event.Target.getAttribute('href');
+
+            const ancora = document.querySelector('href')
+
+            ancora.scrollIntoview({
+              behavior: 'smooth',
+              block: start,
+            })
+          }
+
+            const linkInterno = document.querySelector('[data-scroll="suave"] a[href^^="#"]')
+
+          linkInterno.addEventListener('click', scrollToTop)
     </script>
   </div>
 </body>
