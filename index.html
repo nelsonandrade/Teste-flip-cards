@@ -934,12 +934,13 @@
         </div>
       </div>  
   </div>
-  <div class="car-top show" data-scroll="suave" data-anima="scroll">
-    <a href="#topo" class="back-to-top" onclick="scrollToTop()">
+  <div class="car-top show" id="carTop" data-scroll="suave" data-anima="scroll">
+    <a href="#topo" class="back-to-top" id="btnTop" onclick="goToTop()">
     <span>
       <img src="img/car.png" alt="car">
     </span>
     </a>
+    </div>
    <script>
       const backToTopButton = document.querySelector('.back-to-top')
           const backToTop = () => {
@@ -966,9 +967,47 @@
             })
           }
 
-            const linkInterno = document.querySelector('[data-scroll="suave"] a[href^^="#"]')
+           /* const linkInterno = document.querySelector('[data-scroll="suave"] a[href^^="#"]')
 
-          linkInterno.addEventListener('click', scrollToTop)
+          linkInterno.addEventListener('click', scrollToTop)*/
+    </script>
+    
+    <script>
+      // Verifica a posição da página para mostrar ou ocultar o botão
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const btnTop = document.getElementById("btnTop");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btnTop.style.display = "block";
+  } else {
+    btnTop.style.display = "none";
+  }
+}
+
+// Animação suave ao clicar no botão e ocultar após o clique
+function goToTop() {
+  const scrollStep = -window.scrollY / (500 / 15 ); // 500 é a duração da animação em milissegundos
+  const scrollInterval = setInterval(function(){
+    if (window.scrollY !== 0) {
+      window.scrollBy(0, scrollStep);
+    } else {
+      clearInterval(scrollInterval);
+    }
+  }, 15);
+
+  const btnTop = document.getElementById("btnTop");
+  btnTop.style.transform = "translateY(-100%)";
+
+  // Adiciona um atraso para permitir que a animação de desaparecimento seja concluída
+  setTimeout(() => {
+    btnTop.style.display = "none";
+    btnTop.style.transform = "translateY(0)";
+  }, 500);
+}
+
     </script>
   </div>
 </body>

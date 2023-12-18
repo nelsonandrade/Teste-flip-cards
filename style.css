@@ -3,6 +3,10 @@ header{
   display: flex;
 }
 
+  html {
+    scroll-behavior: auto;
+  }
+
 .nav{
   background-color: #8c8b8b;
   border-top-right-radius: 15px;
@@ -36,9 +40,7 @@ header{
   padding: 1rem;
   align-items: end;
 }
-.nav li{
- 
-}
+
 .nav li a{
   text-decoration: none;
   color: #121212;
@@ -134,7 +136,7 @@ header{
 }
 }*/
 body{
-  background-color: #c3d9f9;
+  background-color: #97b2dc;
 }
 .title h1{
   font-size: 55px;
@@ -208,7 +210,7 @@ body{
     right: 0;
     z-index: 9999;
     opacity: 1;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .car-top.show {
@@ -255,9 +257,10 @@ body{
     height: 89px;
     background: url(img/car-focus.png) no-repeat 0 0
 }
+
+
 /*to display the button to go to the top of the page*/
 .back-to-top {
- 
   visibility: hidden;
   opacity: 0;
   transition: 0.3s;
@@ -269,3 +272,6 @@ body{
   opacity: 1;
   transform: translateY(0);
  }
+
+ 
+ 
