@@ -6,28 +6,34 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="js" href="scrollspy.js">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-select.min.css">
-    <title>Flip Cards</title>
+    <title>Home Page</title>
 </head>
+<script src="script.js"></script>
 <header>
   <div class="nav">
-  <h1>Cars <span>Sport</span></h1>
-  <ul>
-    <li>
-      <a href="#audi">Audi</a>
-      <a href="#bugatti">Bugatti</a>
-      <a href="#bmw">BMW</a>
-      <a href="#ferrari">Ferrari</a>
-      <a href="#ford">Ford</a>
-      <a href="#lambo">Lamborghini</a>
-      <a href="#mclaren">Mclaren</a>
-      <a href="#">Meeting22</a>
-      <a href="#">Porsche</a>
-      <a href="#">Mercedes</a>
-      <a href="#">RR</a>
-      <a href="#">Super Cars</a>
-    </li>
+  <h1>Sport <span>CARS</span></h1>
+
+  <nav>
+    <ul class="nav-links">
+      <li>
+        <a href="audi.">Audi</a>
+        <a href="#bugatti">Bugatti</a>
+        <a href="#bmw">BMW</a>
+        <a href="#ferrari">Ferrari</a>
+        <a href="#ford">Ford</a>
+        <a href="#lambo">Lamborghini</a>
+        <a href="#mclaren">Mclaren</a>
+        <a href="#">Meeting22</a>
+        <a href="#">Porsche</a>
+        <a href="#">Mercedes</a>
+        <a href="#">RR</a>
+        <a href="#">Super Cars</a>
+      </li>
   </ul>
+  <div class="burger-menu">&#9776;</div>
 </div>
+
+</nav>
 </header>
 <body>
   <div id="topo" class="title">
@@ -986,10 +992,15 @@ function scrollFunction() {
     btnTop.style.display = "none";
   }
 }
+var meuBotao = document.getElementById('btnTop');
 
+meuBotao.addEventListener('click', function() {
+  // Define a propriedade de estilo para tornar o background transparente
+  meuBotao.style.background = 'hidden';
+});
 // Animação suave ao clicar no botão e ocultar após o clique
 function goToTop() {
-  const scrollStep = -window.scrollY / (500 / 15 ); // 500 é a duração da animação em milissegundos
+  const scrollStep = -window.scrollY / (1500 / 15 ); // 500 é a duração da animação em milissegundos
   const scrollInterval = setInterval(function(){
     if (window.scrollY !== 0) {
       window.scrollBy(0, scrollStep);
@@ -1007,6 +1018,7 @@ function goToTop() {
     btnTop.style.transform = "translateY(0)";
   }, 500);
 }
+
 
     </script>
   </div>
