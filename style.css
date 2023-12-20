@@ -8,7 +8,7 @@ header{
   }
 
 .nav{
-  background-color: #8c8b8b;
+  background-color: #008dad;
   border-top-right-radius: 15px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -36,12 +36,14 @@ header{
   display: flex;
   list-style-type: none;
   width: auto;
+  height: auto;
   justify-content: space-between;
   padding: 1rem;
   align-items: end;
 }
 
 .nav li a{
+  display: inline-block;
   text-decoration: none;
   color: #121212;
   font-size: 25px;
@@ -50,6 +52,7 @@ header{
   padding: 2px;
   border-radius: 5px;
   margin-left: 5px;
+  margin-top: 5px;
 }
 .nav ul li a:hover{
   background-color: rgb(212, 1, 1);
@@ -62,6 +65,52 @@ header{
   font-size: 24px;
   cursor: pointer;
   display: none;
+}
+@media only screen and (max-width: 1025px)  {
+  .nav{
+    width: 90%;
+  }
+  .nav h1{
+    font-size: 30px;
+   padding-left: 250px;
+  margin-bottom: 50px;
+  }
+  .nav span{
+    font-size: 30px;
+  }
+  .nav-links ul{
+    height: 100px;
+   
+  }
+  .nav-links li{
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+  }
+
+  .nav-links.show li{
+      display: flex;
+      z-index: 2;
+  }
+
+  .nav-links li {
+      text-align: center;
+      margin: 10px 0;
+  }
+  .welcome{
+    visibility: none;
+  }
+  .welcome h3{
+    font-size: 45px;
+  }
+
+  .burger-menu {
+      display: block;
+  }
 }
 @media only screen and (max-width: 768px)  {
   .nav{
@@ -94,10 +143,44 @@ header{
       text-align: center;
       margin: 10px 0;
   }
+  .welcome{
+    width: 200px;
+    margin: 20px 100px;
+  }
+  .welcome h3{
+    font-size: 45px;
+  }
 
   .burger-menu {
       display: block;
   }
+}
+.t-marcas h1{
+  font-size: 75px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 50px;
+  color: black;
+  text-align: center;
+}
+.welcome{
+  display: flex;
+  background: #13a0c058;
+  width: 700px;
+  margin: 20px 600px;
+  border: 2px solid ;
+  border-radius: 50%;
+  box-shadow: 2px 5px 5px black;
+}
+.welcome h3{
+  text-align: center;
+  font-size: 60px;
+  padding-left: 8px;
+}
+.texto p{
+  text-align: center;
+  color: #121212;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
 }
 .container-ferrari {
   display: grid;
@@ -169,6 +252,15 @@ header{
   border: 3px solid black;
   box-shadow: 2px 5px 8px #626161;
 }
+.container-mercedes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  background:url("img/Mercedes/logo.png") no-repeat center top ;
+  background-size: contain;
+  width: auto;
+  border: 3px solid black;
+  box-shadow: 2px 5px 8px #626161;
+}
 
 /*@media only screen and (max-width:1300){
   .container-ferrari {
@@ -182,13 +274,12 @@ body{
 .title h1{
   font-size: 55px;
   font-family: 'Times New Roman', Times, serif;
-  margin-top: 250px;
+  margin-top: 150px;
   color: black;
   text-align: center;
 }
 
 .flip-card{
-   /* background-color: transparent;*/
     width: 300px;
     height: 400px;
     margin: auto;
@@ -197,10 +288,12 @@ body{
     perspective: 1000px;
     flex-direction: row;
   }
+
   .flip-card-front img{
     padding-left:5px ;
     padding-right: 5px;
     border-radius: 10px;
+    z-index: 1000;
 
   }
   .flip-card-inner{
@@ -221,11 +314,10 @@ body{
     height: 100%;
     backface-visibility: hidden;
     display: flex;
-    align-itens: center;
     justify-content: center;
     flex-direction: column;
     border-radius: 14px;
-    background-color: #121212;
+    background-color:rgba(0, 0, 0, 0.5);
   }
   h1, h2, p{
     color:white;
@@ -370,7 +462,7 @@ footer {
   gap: clamp(3rem, 4vw, 7rem);
 }
 .footer-nav > div > h3 {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .footer-nav > div > ul {
   display: flex;
