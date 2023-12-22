@@ -101,12 +101,6 @@ header{
       text-align: center;
       margin: 10px 0;
   }
-  .welcome{
-    visibility: none;
-  }
-  .welcome h3{
-    font-size: 45px;
-  }
 
   .burger-menu {
       display: block;
@@ -143,12 +137,9 @@ header{
       text-align: center;
       margin: 10px 0;
   }
-  .welcome{
-    width: 200px;
-    margin: 20px 100px;
-  }
+  
   .welcome h3{
-    font-size: 45px;
+    font-size: 20px;
   }
 
   .burger-menu {
@@ -163,10 +154,10 @@ header{
   text-align: center;
 }
 .welcome{
-  display: flex;
+  display: block;
   background: #13a0c058;
-  width: 700px;
-  margin: 20px 600px;
+  width: 90%;
+  margin-top: 10px;
   border: 2px solid ;
   border-radius: 50%;
   box-shadow: 2px 5px 5px black;
