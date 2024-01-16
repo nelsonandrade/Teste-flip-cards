@@ -48,7 +48,7 @@ meuBotao.style.background = 'hidden';
 });
 // Animação suave ao clicar no botão e ocultar após o clique
 function goToTop() {
-const scrollStep = -window.scrollY / (1000 / 15 ); // 500 é a duração da animação em milissegundos
+const scrollStep = -window.scrollY / (2000 / 20 ); // 500 é a duração da animação em milissegundos
 const scrollInterval = setInterval(function(){
 if (window.scrollY !== 0) {
 window.scrollBy(0, scrollStep);
@@ -58,13 +58,13 @@ clearInterval(scrollInterval);
 }, 15);
 
 const btnTop = document.getElementById("btnTop");
-btnTop.style.transform = "translateY(-100%)";
+btnTop.style.transform = "translateY(-500%)";
 
 // Adiciona um atraso para permitir que a animação de desaparecimento seja concluída
 setTimeout(() => {
 btnTop.style.display = "none";
 btnTop.style.transform = "translateY(0)";
-}, 500);
+}, 600);
 }
 
 

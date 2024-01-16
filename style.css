@@ -252,7 +252,24 @@ header{
   border: 3px solid black;
   box-shadow: 2px 5px 8px #626161;
 }
-
+.container-porsche {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  background:url("img/Porsche/logo_p.png") no-repeat center top ;
+  background-size: contain;
+  width: auto;
+  border: 3px solid black;
+  box-shadow: 2px 5px 8px #626161;
+}
+.container-rolls-royce {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  background:url("img/Rolls-Royces/logo.png") no-repeat center top ;
+  background-size: contain;
+  width: auto;
+  border: 3px solid black;
+  box-shadow: 2px 5px 8px #626161;
+}
 /*@media only screen and (max-width:1300){
   .container-ferrari {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -384,6 +401,7 @@ body{
 
 
 /*to display the button to go to the top of the page*/
+
 .back-to-top {
   visibility: hidden;
   opacity: 0;
@@ -415,70 +433,70 @@ button {
   cursor: pointer;
 }
 
+/* Estilização básica para o footer */
 footer {
-  padding: 3.5rem clamp(3rem, 6vw, 14rem);
-}
-.footer-wrapper {
-  max-width: 90rem;
-  margin: 0 auto;
-}
-
-.footer-section {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 3rem;
+  background-color: #2d52c2; /* Cor de fundo do footer */
+  color: #fff; /* Cor do texto no footer */
+  padding: 20px; /* Espaçamento interno no footer */
+  text-align: center; /* Alinhamento do texto no centro */
 }
 
+/* Estilização para a seção de inscrição no footer */
 .footer-subscribe {
-  max-width: clamp(20rem, 33vw, 33rem);
-}
-.footer-subscribe > h2 {
-  font-size: clamp(1.5rem, 2.3vw, 2.25rem);
-}
-.input-box {
-  display: flex;
-  max-width: 100%;
-  padding-block: 1rem;
-  border-bottom: 1px solid black;
-  margin-top: 3rem;
-}
-.input-box > input {
-  flex-grow: 1;
+  margin-bottom: 20px; /* Espaçamento inferior para separar da próxima seção */
 }
 
+/* Estilização para a navegação no footer */
 .footer-nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: clamp(3rem, 4vw, 7rem);
-}
-.footer-nav > div > h3 {
-  font-size: 1.5rem;
-}
-.footer-nav > div > ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 2rem;
-}
-.footer-nav > div li {
-  font-size: 1.125rem;
-  font-weight: 700;
-  transition: opacity 200ms ease;
-}
-.footer-nav > div li:hover {
-  opacity: 0.5;
+  flex-wrap: wrap; /* Permitir que os itens da navegação se ajustem a telas menores */
+  justify-content: space-between;
 }
 
+.footer-nav div {
+  flex: 1;
+  margin: 0 10px 20px; /* Espaçamento entre as seções de navegação e inferior */
+}
+
+.footer-nav h3 {
+  color: #111010; /* Cor do título da seção de navegação */
+  font-weight: bold; /* Tamanho do título em negrito */
+  font-size: 30px; /* Tamanho do título */
+}
+
+/* Estilização para links no footer */
+footer a {
+  color: #fff; /* Cor dos links no footer */
+  text-decoration: none; /* Remover sublinhado padrão */
+  font-size: 25px;
+  display: block;
+}
+
+/* Estilização para links no hover no footer */
+footer a:hover {
+  text-decoration: underline; /* Adicionar sublinhado ao passar o mouse sobre os links */
+}
+
+/* Estilização para a seção de direitos autorais no footer */
 .footer-copyright {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.875rem;
-  margin-top: 5rem;
+  margin-top: 20px; /* Espaçamento superior para separar da seção anterior */
+ display: flex;
+ align-items: center; /* Centralizar verticalmente o conteúdo dessa seção */
+ justify-content: center; /* Centralizar horizontalmente o conteúdo dessa seção */
 }
 
-@media (width <= 53rem) {
-  .footer-subscribe {
-    max-width: 100%;
+.footer-copyright p {
+  margin: 5px 0; /* Espaçamento interno nas linhas de texto */
+  font-size: 0.9rem; /* Tamanho da fonte das linha*/
+}
+
+/* Media query para telas menores (por exemplo, dispositivos móveis) */
+@media (max-width: 768px) {
+  .footer-nav {
+    flex-direction: column; /* Empilhar itens da navegação em coluna em telas menores */
+  }
+
+  .footer-nav div {
+    margin: 0 0 20px; /* Espaçamento inferior em telas menores */
   }
 }
